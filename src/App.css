@@ -1,0 +1,429 @@
+.main{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 25px;
+  margin: 20px;
+}
+
+.input_container {
+  margin-left: 40px;
+}
+
+.textarea {
+  width: 300px;
+  height: 30px;
+  resize: none;
+  border: none;
+  outline: none;
+  border-bottom: #127D2A solid 2px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 20px;
+  padding-left: 10px;
+}
+
+.LoginRoute__layout {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.LoginRoute__logo {
+  width: 256px;
+  height: 256px;
+  margin-left: 25px;
+}
+
+.LoginRoute__button {
+  background-color: #127D2A;
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  border-radius: 100px;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 10px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.LoginRoute__checkbox[type="checkbox"]:checked  {
+  accent-color: #127D2A;
+}
+
+.App_leftSide {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  height: 100vh;
+}
+
+.Loader__layout {
+  width: 100vh;
+  height: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: gray;
+}
+
+.Loader__spinner {
+  animation: rotate 2s linear infinite;
+  z-index: 2;
+  position: absolute;
+  margin: -25px 0 0 -25px;
+  width: 50px;
+  height: 50px;
+}
+
+.Loader__path {
+  stroke: #127D2A;
+  stroke-linecap: round;
+  animation: dash 1.5s ease-in-out infinite;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes dash {
+  0% {
+    stroke-dasharray: 1, 150;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -35;
+  }
+  100% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -124;
+  }
+}
+
+.SearchComponent__layout {
+  width: 100%;
+}
+
+.SearchComponent__searchField {
+  display: flex;
+  flex-direction: row;
+  margin-top: 30px;
+  justify-content: space-between;
+  width: 80%;
+}
+
+.SearchComponent__actionButton {
+  margin-top: 30px;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  text-decoration: underline;
+  color: #127D2A;
+}
+
+@media (min-width: 1400px) {
+  .SearchSwitch__container {
+    width: 100%;
+    height: 30px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 1600px) {
+  .SearchSwitch__container {
+    width: 100%;
+    height: 30px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+
+
+/*
+.SearchSwitch__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  font-size: 18px;
+  font-weight: lighter;
+  cursor: pointer;
+}
+*/
+
+.SearchSwitch__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: lighter;
+  width: 200px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.SearchSwitch__item_selected {
+  background-color: #127D2A;
+  color: #FFFFFF;
+  border-radius: 20px;
+}
+
+.Button__main {
+  background-color: #127D2A;
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  border-radius: 100px;
+}
+
+.Button__label {
+  color: #FFFFFF;
+
+}
+
+.Button__logo {
+  width: 20px;
+  height: 20px;
+}
+
+.Button__main:hover {
+  cursor: pointer;
+}
+
+.CardTable__component {
+  width: 80%;
+  height: 100%;
+  margin: 30px;
+}
+
+.CardTable__title {
+  font-weight: bold;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.CardTable__table {
+  margin-top: 20px;
+  margin-left: 5px;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #127D2A white;
+}
+
+.CardTable__header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 25px;
+  border-bottom: #127D2A 2px solid;
+}
+
+.CardTable__row {
+  display: flex;
+  transition: background-color 0.2s linear;
+}
+
+.CardTale__rowCurrent {
+  background-color: rgb(222, 222, 222, 0.6);
+}
+
+.CardTable__row:hover {
+  background-color: rgb(222, 222, 222, 1);
+  cursor: pointer;
+}
+
+.CardTable__item {
+  width: 50%;
+  height: 30px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  border-bottom: gray 1px solid;
+}
+
+.CardInfo__component {
+  width: 100%;
+  margin: 30px;
+}
+
+.CardInfo__title {
+  font-size: 16px;
+  font-weight: lighter;
+  margin-bottom: 10px;
+  color: gray;
+  display: flex;
+  align-items: flex-end;
+  height: 20px;
+}
+
+.CardInfo__item {
+  font-size: 18px;
+  color: black;
+  margin-left: 5px;
+}
+
+.CardInfo__block {
+  margin-top: 20px;
+  width: 500px;
+}
+
+.CardInfo__blockTitle {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.CardInfo__textButton {
+  margin-left: 10px;
+  color: cornflowerblue;
+  text-decoration: underline;
+  cursor: pointer;
+  user-select: none;
+}
+
+.CardInfo__textButtonDelete {
+  color: red;
+  text-decoration: underline;
+  cursor: pointer;
+  user-select: none;
+}
+
+.CardInfo__actions {
+  width: 100%;
+  margin-top: 30px;
+  display: flex;
+  justify-content: flex;
+}
+
+.CardInfo__table {
+  height: 200px;
+  width: 600px;
+}
+
+.CardInfo__tableHeader {
+  height: 40px;
+  background-color: rgb(0, 116, 63, 0.75);
+  width: 800px;
+  display: flex;
+  flex-direction: row;
+}
+
+.CardInfo__tableHeaderItem {
+  color: white;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding-left: 5px;
+  text-align: center;
+}
+
+.CardInfo__tableRow {
+  display: flex;
+  flex-direction: "row";
+  width: 800px;
+}
+
+.CardInfo__tableItem {
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-left: 5px;
+  height: 30px;
+
+}
+
+.Notification__position {
+  position: absolute;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  bottom: 30px;
+  animation: transformation 1.2s linear;
+}
+
+@keyframes transformation {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
+}
+
+@keyframes change_opacity {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.History__component {
+  background-color: rgb(231, 230, 230);
+  box-shadow: 0px 0px 4px 0px;
+  height: 100vh;
+  width: 40vh;
+}
+
+.History__title {
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+}
+
+.History__table {
+  margin-top: 40px;
+  width: 100%;
+  height: 80vh;
+}
+
+.History__header {
+  font-size: 18px;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.History__border {
+  background: rgb(231,230,230);
+  background: linear-gradient(90deg, rgba(217,216,216,1) 0%, rgba(191,191,191,1) 50%, rgba(217,216,216,1) 100%);
+  height: 2px;
+  width: 100%;
+  display: inline-block;
+  margin-top: 3px;
+}
